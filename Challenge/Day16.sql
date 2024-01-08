@@ -14,7 +14,10 @@ SELECT
     END AS NamesakeStatus
 FROM employees e1
 CROSS JOIN department_budgets db
-LEFT JOIN employees e2 ON e1.Name = e2.Name AND e1.Department = e2.Department AND e1.ID != e2.ID;
+LEFT JOIN 
+	employees e2 ON e1.Name = e2.Name 
+	AND e1.Department = e2.Department 
+	AND e1.ID <> e2.ID;
 
 SELECT e.Name AS EmployeeName, db.Department
 FROM employees e

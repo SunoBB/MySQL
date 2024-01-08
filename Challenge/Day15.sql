@@ -1,3 +1,5 @@
+USE HwData
+
 SELECT e.Name, db.Budget 
 FROM employees e 
 LEFT JOIN department_budgets db ON e.Department = db.Department;

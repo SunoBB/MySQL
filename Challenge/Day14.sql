@@ -1,3 +1,5 @@
+USE HwData
+
 SELECT d.Department
 FROM Department_budgets AS d
 INNER JOIN (SELECT Department, SUM(Salary) AS total_salary
